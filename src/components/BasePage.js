@@ -8,7 +8,7 @@ export const BasePage = props => {
         <Toolbar>
           <Grid container alignItems="center" spacing={16} style={{ padding: 8 }}>
             <Grid item xs={1}>
-              <img width={64} src="./images/curingas_branca.png" alt="curingas" />
+              <img width={64} src="./images/everest_branca.png" alt="everest" />
             </Grid>
             <Grid item xs>
               <Typography align="left" variant="h3" color="inherit">

@@ -3,7 +3,7 @@ import { withStyles } from '@material-ui/core/styles';
 import { Grid } from '@material-ui/core';
 import * as _ from 'lodash';
 import ItemRanking from './ItemRanking';
-import CuringasRepo from '../../repos/CuringasRepo';
+import EverestRepo from '../../repos/EverestRepo';
 
 const styles = theme => ({
   card: {
@@ -18,7 +18,7 @@ class Ranking extends React.Component {
   };
 
   componentWillMount() {
-    CuringasRepo.listarCuringas().then(ranking => {
+    EverestRepo.listarEverest().then(ranking => {
       this.setState({
         ranking: ranking
       });

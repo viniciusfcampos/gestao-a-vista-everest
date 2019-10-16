@@ -41,7 +41,8 @@ class ItemOneOnOne extends React.Component {
                   fontSize: 28,
                   fontWeight: 900,
                   color: '#ffffff',
-                  minHeight: 140,
+                  height: 140,
+                  overflow: 'hidden',
                   textTransform: 'capitalize'
                 }}
               >

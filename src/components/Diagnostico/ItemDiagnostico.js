@@ -7,7 +7,7 @@ export const ItemDiagnostico = props => {
     <Grid item container xs={2} style={{ minHeight: 160 }}>
       <Grid item container justify="center" direction="column" align="left">
         <Typography style={{ fontSize: 28, fontWeight: 900 }}>
-          {squad.Squad.replace('Curingas - ', '')}
+          {squad.Squad.replace('Everest - ', '')}
         </Typography>
       </Grid>
     </Grid>,

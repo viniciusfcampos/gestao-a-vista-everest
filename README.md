@@ -11,8 +11,8 @@ Usamos o plugin gh-pages para react (https://github.com/gitname/react-gh-pages)
 
 Atualize o arquivo package json
 ```json
-  "name": "gestao-a-vista-curingas",
-  "homepage": "https://dtidigitalcrafters.github.io/gestao-a-vista-curingas",
+  "name": "gestao-a-vista-everest",
+  "homepage": "https://dtidigitalcrafters.github.io/gestao-a-vista-everest",
   "version": "1.0.0",
 ```
 

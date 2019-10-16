@@ -23,7 +23,7 @@ class Diagnostico extends React.Component {
   };
 
   componentWillMount() {
-    SquadRepo.listarSquads('Curingas').then(squads => {
+    SquadRepo.listarSquads('Everest').then(squads => {
       this.setState({
         squads: squads
       });

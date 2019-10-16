@@ -2,10 +2,10 @@ import axios from 'axios';
 import * as _ from 'lodash';
 import moment from 'moment';
 
-class CuringasRepo {
-  listarCuringas() {
+class EverestRepo {
+  listarEverest() {
     return axios
-      .get(`https://one-on-ones-dti.herokuapp.com/api/data_tribe/Curingas`)
+      .get(`https://one-on-ones-dti.herokuapp.com/api/data_tribe/Everest`)
       .then(response => {
         return response.data.crafters;
       })
@@ -14,7 +14,7 @@ class CuringasRepo {
       });
   }
 
-  parseCuringa(array) {
+  parseEverest(array) {
     return {
       Crafter: array[0],
       Data: moment(array[1], 'DD/MM/YYYY'),
@@ -27,4 +27,4 @@ class CuringasRepo {
   }
 }
 
-export default new CuringasRepo();
+export default new EverestRepo();

@@ -6,7 +6,7 @@ import PauseButton from '@material-ui/icons/Pause';
 import PlayButton from '@material-ui/icons/PlayArrow';
 import Iframe from './components/Iframe';
 
-const pages = [0, 1, 2, 3];
+const pages = [0, 1, 2];
 
 const styles = theme => ({
   fab: {
@@ -53,36 +53,30 @@ class App extends React.Component {
             <Tab wrapped label="Ritos" />
             <Tab wrapped label="Diagnóstico" />
             <Tab wrapped label="1-1" />
-            <Tab wrapped label="OKR Prodap" />
           </Tabs>
           <Fab onClick={this.handleClick} className={classes.fab} color="secondary">
             {this.state.play ? (
               <PauseButton style={{ color: '#ffffff' }} />
             ) : (
-              <PlayButton style={{ color: '#ffffff' }} />
-            )}
+                <PlayButton style={{ color: '#ffffff' }} />
+              )}
           </Fab>
         </AppBar>
         {page === 0 && (
           <Iframe
             page={
-              'https://docs.google.com/spreadsheets/d/e/2PACX-1vSpC_x6FOQi7QOG4-gFFZzgIp_BCHZEKLHy8PoJpA9twqOAsRVMUerK9BEhglaI92K58qjW4DOFFkMC/pubhtml?gid=2092766634&single=true'
+              'https://docs.google.com/spreadsheets/d/e/2PACX-1vQxJMQAxD9LvF75dM89kX7MsN6W-GRKhwacM-J20YSfOfVKOCoTjIbSheLhUTl7d3ZAWHbZXT7q7Qdf/pubhtml?gid=2092766634&single=true'
             }
           />
         )}
         {page === 1 && (
           <Iframe
             page={
-              'https://docs.google.com/spreadsheets/d/e/2PACX-1vSpC_x6FOQi7QOG4-gFFZzgIp_BCHZEKLHy8PoJpA9twqOAsRVMUerK9BEhglaI92K58qjW4DOFFkMC/pubhtml?gid=890090851&single=true'
+              'https://docs.google.com/spreadsheets/d/e/2PACX-1vQxJMQAxD9LvF75dM89kX7MsN6W-GRKhwacM-J20YSfOfVKOCoTjIbSheLhUTl7d3ZAWHbZXT7q7Qdf/pubhtml?gid=890090851&single=true'
             }
           />
         )}
         {page === 2 && <OneOnOne />}
-        {page === 3 && (
-          <Iframe
-            page={`https://dtidigital.sharepoint.com/sites/tribocuringas/_layouts/15/Doc.aspx?sourcedoc={41dacf85-a4e0-48c9-a2ac-e4ac258e5280}&action=embedview&wdAllowInteractivity=False&Item='Geral'!B2%3AK23&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True`}
-          />
-        )}
       </MuiThemeProvider>
     );
   }

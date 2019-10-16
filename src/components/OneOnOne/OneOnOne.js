@@ -1,7 +1,7 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import { Grid } from '@material-ui/core';
-import CuringasRepo from '../../repos/CuringasRepo';
+import EverestRepo from '../../repos/EverestRepo';
 import ItemOneOnOne from './ItemOneOnOne';
 import * as _ from 'lodash';
 
@@ -19,7 +19,7 @@ class OneOnOne extends React.Component {
   };
 
   componentWillMount() {
-    CuringasRepo.listarCuringas().then(crafters => {
+    EverestRepo.listarEverest().then(crafters => {
       this.setState({
         crafters: crafters
       });
