@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/gestao-a-vista-everest/precache-manifest.d6e8ff96276a94e257003e3aecddd1c3.js"
+  "/gestao-a-vista-everest/precache-manifest.d9df1d51022f945cf783d38cc3db9aca.js"
 );
 
 self.addEventListener('message', (event) => {
