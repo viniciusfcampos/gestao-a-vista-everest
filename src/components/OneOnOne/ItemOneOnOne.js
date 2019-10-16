@@ -38,10 +38,10 @@ class ItemOneOnOne extends React.Component {
               <Typography
                 align="left"
                 style={{
-                  fontSize: 28,
+                  fontSize: 20,
                   fontWeight: 900,
                   color: '#ffffff',
-                  height: 140,
+                  height: 100,
                   overflow: 'hidden',
                   textTransform: 'capitalize'
                 }}
@@ -53,22 +53,24 @@ class ItemOneOnOne extends React.Component {
           />
           <CardContent style={{ minHeight: 48 }}>
             <Grid container>
-              <Grid item xs={3}>
+              <Grid item xs={4}>
                 <Typography style={{ fontSize: 14, fontWeight: 200, fontStyle: 'italic', color: '#ffffff' }}>
                   Data:
                 </Typography>
-                <Typography style={{ fontSize: 22, fontWeight: 700, color: '#ffffff' }}>
+                <Typography style={{ fontSize: 16, fontWeight: 700, color: '#ffffff' }}>
                   {crafter.meeting ? moment(crafter.meeting.lastMeeting).format('DD/MM') : '-'}
                 </Typography>
               </Grid>
-              <Grid item xs={9}>
+              <Grid item xs={8}>
                 <Typography style={{ fontSize: 14, fontWeight: 200, fontStyle: 'italic', color: '#ffffff' }}>
                   Líder:
                 </Typography>
-                <Typography style={{ fontSize: 22, fontWeight: 400, color: '#ffffff' }} noWrap={true}>
+                <Typography style={{ fontSize: 16, fontWeight: 700, color: '#ffffff' }} noWrap={true}>
                   {crafter.meeting ? crafter.meeting.leader : '-'}
                 </Typography>
               </Grid>
+            </Grid>
+            <Grid container>
             </Grid>
           </CardContent>
         </Card>
