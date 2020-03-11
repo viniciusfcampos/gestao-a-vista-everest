@@ -32,7 +32,7 @@ class OneOnOne extends React.Component {
       <div className={classes.card}>
         <Grid container spacing={8} direction="row">
           {_.chain(this.state.crafters)
-            .orderBy(crafter => (crafter.meeting ? crafter.meeting.lastMeeting : ''))
+            .orderBy(crafter => (crafter.association ? crafter.association.lastMeeting : ''))
             .map(crafter => <ItemOneOnOne key={crafter.name} crafter={crafter} />)
             .value()}
         </Grid>

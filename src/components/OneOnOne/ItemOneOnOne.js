@@ -24,7 +24,7 @@ class ItemOneOnOne extends React.Component {
     const { crafter } = this.props;
     return (
       <Grid item xs={2}>
-        <Card className={this.corStatus(crafter.meeting)}>
+        <Card className={this.corStatus(crafter.association)}>
           <CardHeader
             style={{ paddingBottom: 0 }}
             // avatar={
@@ -58,7 +58,7 @@ class ItemOneOnOne extends React.Component {
                   Data:
                 </Typography>
                 <Typography style={{ fontSize: 16, fontWeight: 700, color: '#ffffff' }}>
-                  {crafter.meeting ? moment(crafter.meeting.lastMeeting).format('DD/MM') : '-'}
+                  {crafter.association ? moment(crafter.association.lastMeeting).format('DD/MM') : '-'}
                 </Typography>
               </Grid>
               <Grid item xs={8}>
@@ -66,7 +66,7 @@ class ItemOneOnOne extends React.Component {
                   Líder:
                 </Typography>
                 <Typography style={{ fontSize: 16, fontWeight: 700, color: '#ffffff' }} noWrap={true}>
-                  {crafter.meeting ? crafter.meeting.leader : '-'}
+                  {crafter.association ? crafter.association.leader : '-'}
                 </Typography>
               </Grid>
             </Grid>
@@ -85,11 +85,11 @@ class ItemOneOnOne extends React.Component {
       .join(' ');
   };
 
-  corStatus = meeting => {
-    if (!meeting) {
+  corStatus = association => {
+    if (!association) {
       return this.props.classes.Escalado;
     }
-    const dias = moment().diff(moment(meeting.lastMeeting), 'days');
+    const dias = moment().diff(moment(association.lastMeeting), 'days');
     if (dias < 21) {
       return this.props.classes.EmDia;
     } else if (dias < 30) {

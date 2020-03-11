@@ -5,7 +5,7 @@ import moment from 'moment';
 class EverestRepo {
   listarEverest() {
     return axios
-      .get(`https://one-on-ones-dti.herokuapp.com/api/data_tribe/Everest`)
+      .get(`https://one-on-ones-dti.herokuapp.com/api/data_tribe?tribe=Everest`)
       .then(response => {
         return response.data.crafters;
       })
